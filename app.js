@@ -15,5 +15,9 @@ module.exports = {
   },
   addNumbers: (value1, value2) => {
     return value1 + value2;
+  },
+  subtractNumber: (a, b)=> {
+    return a - b;
   }
+  
 };
