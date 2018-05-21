@@ -8,7 +8,7 @@ const app = require("../app");
 //Results
 sayHelloResult = app.sayHello();
 addNumbersResult = app.addNumbers(5, 5);
-subtractNumberResult = app.subtractNumber(12, 10);
+subtractNumberResult = app.subtractNumber(12, 1);
 
 describe("App", () => {
   describe("sayHello()", () => {
@@ -34,8 +34,12 @@ describe("App", () => {
     });
   });
   describe("subtractNumber()", () => {
-    it("subtractNumber is below ", () => {
+    it("subtractNumber is below 5", () => {
       assert.isBelow(subtractNumberResult, 5);
+
+      it("subtractNumber() should return type number", () => {
+        assert.typeOf(subtractNumberResult, "number");
+      });
     });
   });
 });
